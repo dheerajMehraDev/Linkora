@@ -10,6 +10,9 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @RequiredArgsConstructor
 public class PostServiceImpl implements PostService {
@@ -32,5 +35,14 @@ public class PostServiceImpl implements PostService {
                 () -> new ResourceNotFoundException("did not found post for id " + postId)
         );
         return modelMapper.map(post, PostResponseDto.class);
+    }
+
+    @Override
+    public List<PostResponseDto> getAllPostByUserId(Long userId) {
+        List<Post> posts = postRepository.findByUserId(userId);
+        return
+                posts.stream()
+                        .map(post -> modelMapper.map(post, PostResponseDto.class))
+                .collect(Collectors.toList());
     }
 }

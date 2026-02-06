@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/posts")
 @RequiredArgsConstructor
@@ -20,7 +22,7 @@ public class PostController {
 
     @PostMapping
     public ResponseEntity<PostResponseDto> createPost(@RequestBody @Valid PostCreateRequestDto dto , HttpServletRequest request){
-        PostResponseDto responseDto = postService.createPost(dto,1L);
+        PostResponseDto responseDto = postService.createPost(dto,1L);// TODO : add a real user id here
         return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
     }
 
@@ -28,6 +30,12 @@ public class PostController {
     public ResponseEntity<PostResponseDto> getPostsById(@PathVariable  Long postId){
         PostResponseDto dto  = postService.getPostById(postId);
         return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/getall/{userId}")
+    public ResponseEntity<List<PostResponseDto>> getAllPostByUserId(@PathVariable  Long userId){
+        List<PostResponseDto> posts  = postService.getAllPostByUserId(userId);
+        return new ResponseEntity<>(posts,HttpStatus.OK);
     }
 
 }

@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: connections-service
+
+  neo4j:
+    uri: neo4j+s://2949ea5d.databases.neo4j.io
+    authentication:
+      username: neo4j
+      password: YRB_zoAVvloDZbTgVijwQqMTxKj4R0VJtPGCjT5vIzU
+
+    data:
+      neo4j:
+        database: neo4j   # default database name in Aura
+
+  logging:
+    level:
+      org.springframework.data.neo4j: INFO
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:8761/eureka
+
+server:
+  port: 9030
+
+
+
+
+

@@ -9,15 +9,22 @@ spring :
               predicates:
                 - Path=/users/**
 
-            - id: posts-service
-              uri: lb://POSTS-SERVICE
+            - id: post-service
+              uri: lb://POST-SERVICE
               predicates:
                 - Path=/posts/**
+              filters:
+                - name: AuthenticationFilter
+
 
             - id: connections-service
               uri: lb://CONNECTIONS-SERVICE
               predicates:
                 - Path=/connections/**
+
+jwt:
+  secretKey: dfjskdjfkajsdfjsdfjjsdfjaksdjf;kjsadfkjksladjfkljsdfkljsdklfj
+
 
 
 

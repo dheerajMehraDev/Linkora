@@ -15,6 +15,8 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
@@ -26,8 +28,14 @@ public class AuthServiceImpl implements AuthService {
 
 
     @Override
-    public UserDto signUp(SignupRequestDto dto) {
-      User user = modelMapper.map(dto , User.class);
+    public UserDto signUp(SignupRequestDto dto)  {
+       boolean isEmpty =  userRepository.findByEmail(dto.getEmail()).isEmpty();
+       try{
+           if(!isEmpty) throw new RuntimeException("user already present ");
+       } catch (Exception e) {
+               throw new RuntimeException(e);
+       }
+        User user = modelMapper.map(dto , User.class);
       user.setPassword(PasswordUtil.hashPassword(dto.getPassword()));
         User savedUser = userRepository.save(user);
        return modelMapper.map(savedUser, UserDto.class);

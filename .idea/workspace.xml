@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6df332be-2fea-4af8-bc99-9ff30ace1303" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Linkora-discoveryserver/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connection-service/src/main/java/com/linkora/connection_service/Controller/PersonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connection-service/src/main/java/com/linkora/connection_service/Entity/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connection-service/src/main/java/com/linkora/connection_service/Repository/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connection-service/src/main/java/com/linkora/connection_service/Service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkora-api-gateway/src/main/java/com/linkora/apigateway/Filters/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkora-api-gateway/src/main/java/com/linkora/apigateway/Service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Client/ConnectionServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Config/UserContextHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Config/UserInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Dto/PersonDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkora-api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/linkora-api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkora-api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/linkora-api-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/PostServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/PostServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/dheeraj/user_service/Service/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/dheeraj/user_service/Service/AuthServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,18 +38,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "dheerajMehraDev"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dheerajMehraDev&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dheerajMehraDev/Linkora.git",
-    "accountId": "276dbdaf-0c1e-4ba4-83e0-629a9997ae8e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dheerajMehraDev/Linkora.git&quot;,
+    &quot;accountId&quot;: &quot;276dbdaf-0c1e-4ba4-83e0-629a9997ae8e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -59,10 +61,10 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="39TeZvOSRb6mvKRABQroKKSAwue" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -76,15 +78,16 @@
     "Application.Api Gateway.executor": "Run",
     "Application.connection-service.executor": "Run",
     "Application.discovery server.executor": "Run",
-    "Application.post-service.executor": "Run",
+    "Application.post-service.executor": "Debug",
     "Application.user-service.executor": "Run",
     "Maven.linkora-api-gateway [clean].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.LinkoraApiGatewayApplication.executor": "Run",
-    "git-widget-placeholder": "feature/user-service/crud",
+    "git-widget-placeholder": "feature/api-gateway",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
@@ -100,7 +103,7 @@
         <entry key="Application">
           <value>
             <map>
-              <entry key="Api Gateway" value="FAILED" />
+              <entry key="Api Gateway" value="STOPPED" />
               <entry key="connection-service" value="STOPPED" />
               <entry key="discovery server" value="STOPPED" />
               <entry key="post-service" value="STOPPED" />
@@ -222,6 +225,16 @@
           <url>file://$PROJECT_DIR$/connection-service/src/main/java/com/linkora/connection_service/Controller/PersonController.java</url>
           <line>22</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/linkora-api-gateway/src/main/java/com/linkora/apigateway/Filters/AuthenticationFilter.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/post-service/src/main/java/com/dheeraj/post_service/Controller/PostController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

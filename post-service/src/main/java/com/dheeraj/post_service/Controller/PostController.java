@@ -1,5 +1,8 @@
 package com.dheeraj.post_service.Controller;
 
+import com.dheeraj.post_service.Client.ConnectionServiceClient;
+import com.dheeraj.post_service.Config.UserContextHolder;
+import com.dheeraj.post_service.Dto.PersonDto;
 import com.dheeraj.post_service.Dto.PostCreateRequestDto;
 import com.dheeraj.post_service.Dto.PostResponseDto;
 import com.dheeraj.post_service.Service.Interface.PostService;
@@ -18,7 +21,7 @@ import java.util.List;
 public class PostController {
 
     private  final PostService postService;
-
+    private final ConnectionServiceClient connectionServiceClient;
 
     @PostMapping
     public ResponseEntity<PostResponseDto> createPost(@RequestBody @Valid PostCreateRequestDto dto , HttpServletRequest request){
@@ -29,6 +32,10 @@ public class PostController {
     @GetMapping("/{postId}")
     public ResponseEntity<PostResponseDto> getPostsById(@PathVariable  Long postId){
         PostResponseDto dto  = postService.getPostById(postId);
+        Long userId = UserContextHolder.getCurrentUser();
+        List<PersonDto> firstDegreeConnectionsById = connectionServiceClient.getFirstDegreeConnectionsById(userId);
+        // TODO : send notifications to all the connections using kafka
+
         return ResponseEntity.ok(dto);
     }
 
